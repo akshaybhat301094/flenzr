@@ -1,34 +1,26 @@
 import { Button, ThemeProvider } from '@mui/material';
 import * as React from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
 import { defaultTheme } from '../../../../libs/theme';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const Social = React.lazy(() => import('social/Module'));
+const SignUp = React.lazy(
+  () => import('./components/Onboarding/SignUp/SignUp')
+);
+const SignIn = React.lazy(
+  () => import('./components/Onboarding/SignIn/SignIn')
+);
+const LandingPage = React.lazy(() => import('./components/Landing/Landing'));
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <React.Suspense fallback={null}>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-
-          <li>
-            <Link to="/social">Social</Link>
-          </li>
-        </ul>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Button>Button in shell</Button>
-              </>
-            }
-          />
-
-          <Route path="/social" element={<Social customProps={10} />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/" element={<LandingPage />} />
+          {/* <Route path='*' element={<Page404 />} /> */}
         </Routes>
       </React.Suspense>
     </ThemeProvider>
