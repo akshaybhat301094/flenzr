@@ -1,16 +1,32 @@
-import React from 'react';
-import Grid from '@mui/material/Grid';
+import { Button } from '@mui/material';
+import logo from '../../../../../../assets/Logos/SVG/logo-default.svg';
+import backpack from '../../../../../../assets/resources/images/camp-fire-light.svg';
+import { Trans } from 'react-i18next';
 
 const LandingPage = () => {
   return (
-    <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }} direction="row">
-      <Grid item xs={12} sm={6} md={6}>
-        <div>xs=12 md=6 sm=6</div>
-      </Grid>
-      <Grid item xs={12} sm={6} md={6}>
-        <div>xs=12 md=6 sm=6</div>
-      </Grid>
-    </Grid>
+    <div className="flex w-screen h-screen overflow-hidden">
+      <div className="w-1/2 p-10">
+        <img className="w-32 mb-4" src={logo} alt="Flenzr" />
+        <img className="p-10 w-full" src={backpack} alt="Letsgo" />
+      </div>
+      <div className="w-1/2 p-10 flex h-screen flex-col">
+        <div className="h-1/3">
+          <Trans i18nKey="helloWorld" />
+          <Button className="float-right" variant="contained">
+            login
+          </Button>
+        </div>
+        <div className="text-center text-3xl">
+          <div className="inline-block align-text-bottom font-bold">
+            Find the right Influencer for your Brand
+          </div>
+          <Button className="mx-auto mt-24" variant="contained" color="success">
+            Join Now
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 };
 
