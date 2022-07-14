@@ -47,8 +47,8 @@ const LandingPage = () => {
         />
       </div>
 
-      <div className="w-screen h-1/2 laptop:h-1/4 desktop:h-1/4 absolute bottom-0 pb-10 overflow-visible">
-        <div className="text-center text-3xl -mt-16">
+      <div className="w-screen h-1/2 laptop:h-1/4 -mt-16 desktop:h-1/4 absolute bottom-0 pb-10 overflow-hidden">
+        <div className="text-center text-3xl">
           <img
             className="w-3/4 mb-10 block laptop:hidden desktop:hidden mx-auto"
             src={logo}
@@ -78,14 +78,12 @@ const LandingPage = () => {
           </div>
         </div>
         <Lottie
-          className="w-full mx-auto absolute"
+          className="w-full mx-auto absolute -z-10"
           animationData={aurora}
           style={{
-            position: 'absolute',
             top: '0%',
             left: '50%',
             transform: 'translate(-50%, 0%)',
-            zIndex: -1,
           }}
           loop={true}
           renderer="svg"
