@@ -47,14 +47,14 @@ const LandingPage = () => {
         />
       </div>
 
-      <div className="w-screen h-1/2 laptop:h-1/4 desktop:h-1/4 laptop:bg-white desktop:bg-white absolute bottom-0 pb-10 overflow-visible">
+      <div className="w-screen h-1/2 laptop:h-1/4 desktop:h-1/4 absolute bottom-0 pb-10 overflow-visible">
         <div className="text-center text-3xl -mt-16">
           <img
             className="w-3/4 mb-10 block laptop:hidden desktop:hidden mx-auto"
             src={logo}
             alt="Flenzr"
           />
-          <div className="text-sm px-4 laptop:text-xl desktop:text-xl text-white laptop:text-black desktop:text-black font-bold mb-6 -mt-18">
+          <div className="text-sm px-4 laptop:text-2xl desktop:text-2xl text-white laptop:text-black desktop:text-black font-bold mb-6 -mt-18">
             {t(trans.landing.subtext)}
           </div>
           <div className="mx-auto mt-4">
@@ -68,9 +68,9 @@ const LandingPage = () => {
             </Button>
             <span
               className="px-4 text-white laptop:text-black desktop:text-black 
-            text-xs laptop:text-sm desktop:text-sm"
+            text-xs laptop:text-xl desktop:text-xl"
             >
-              or
+              OR
             </span>
             <Button variant="contained" onClick={() => navigate('/signin')}>
               {t(trans.landing.login)}
@@ -78,11 +78,11 @@ const LandingPage = () => {
           </div>
         </div>
         <Lottie
-          className="w-full h-full mx-auto absolute"
+          className="w-full mx-auto absolute"
           animationData={aurora}
           style={{
             position: 'absolute',
-            bottom: '0',
+            top: '0%',
             left: '50%',
             transform: 'translate(-50%, 0%)',
             zIndex: -1,
