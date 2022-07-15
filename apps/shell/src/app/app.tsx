@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
 import { defaultTheme } from '../../../../libs/theme';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import ShellBar from './components/ShellBar/ShellBar';
 
 const SignUp = React.lazy(

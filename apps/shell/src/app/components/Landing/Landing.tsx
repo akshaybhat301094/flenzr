@@ -3,7 +3,6 @@ import logo from '../../../../../../assets/Logos/SVG/logo-white.svg';
 import wave from '../../../../../../assets/resources/images/wave.png';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import trans from '../../locales/en/translation';
 import Lottie from 'lottie-react';
 import influencer from '../../../../../../assets/Animations/influencer-day.json';
 import aurora from '../../../../../../assets/Animations/aurora.json';
@@ -55,7 +54,7 @@ const LandingPage = () => {
             alt="Flenzr"
           />
           <div className="text-sm px-4 laptop:text-2xl desktop:text-2xl text-white laptop:text-black desktop:text-black font-bold mb-6 -mt-18">
-            {t(trans.landing.subtext)}
+            {t('subtext')}
           </div>
           <div className="mx-auto mt-4">
             <Button
@@ -64,7 +63,7 @@ const LandingPage = () => {
               color="success"
               onClick={() => navigate('/signup')}
             >
-              {t(trans.landing.join)}
+              {t('join')}
             </Button>
             <span
               className="px-4 text-white laptop:text-black desktop:text-black 
@@ -73,7 +72,7 @@ const LandingPage = () => {
               OR
             </span>
             <Button variant="contained" onClick={() => navigate('/signin')}>
-              {t(trans.landing.login)}
+              {t('login')}
             </Button>
           </div>
         </div>
