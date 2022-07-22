@@ -10,9 +10,7 @@ import aurora from '../../../../../../assets/Animations/aurora.json';
 const LandingPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const topBox = {
-    backgroundColor: '#02021c',
-  };
+  const topBox = { backgroundColor: '#02021c' };
 
   return (
     <div className="w-screen h-screen overflow-hidden">
@@ -65,10 +63,7 @@ const LandingPage = () => {
             >
               {t('join')}
             </Button>
-            <span
-              className="px-4 text-white laptop:text-black desktop:text-black 
-            text-xs laptop:text-xl desktop:text-xl"
-            >
+            <span className="px-4 text-white laptop:text-black desktop:text-black text-xs laptop:text-xl desktop:text-xl">
               OR
             </span>
             <Button variant="contained" onClick={() => navigate('/signin')}>

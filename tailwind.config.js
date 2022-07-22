@@ -9,19 +9,14 @@ module.exports = {
       info: '#2754e6',
       success: '#10d876',
       white: '#ffff',
-      black: '#000000'
+      black: '#000000',
     },
     screens: {
       mobile: '640px',
-      // => @media (min-width: 640px) { ... }
-
       laptop: '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      desktop: '1280px'
-      // => @media (min-width: 1280px) { ... }
+      desktop: '1280px',
     },
-    extend: {}
+    extend: {},
   },
-  plugins: []
+  plugins: [],
 };
