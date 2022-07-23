@@ -1,25 +1,28 @@
+import Button from '@mui/material/Button';
+import FormControl from '@mui/material/FormControl';
+import TextField from '@mui/material/TextField';
 import React, { useState } from 'react';
-import { Button, FormControl, TextField } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
-const SignInForm = () => {
+const BrandSignInForm = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
+    console.log('Authenticate and Login to Brand Dashboard');
     navigate('/');
   };
 
   return (
     <FormControl className="w-full">
       <TextField
-        label={t('emailOrMobile')}
+        label={t('emailWithDomainName')}
         id="email"
         value={email}
-        type="text"
+        type="email"
         margin="normal"
         className="w-full"
         onChange={(e) => setEmail(e.target.value)}
@@ -34,8 +37,10 @@ const SignInForm = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <div className="flex mt-4 justify-between">
-        <Button variant="text">{t('forgotPassword')}</Button>
-        <Button onClick={handleLogin} variant="contained">
+        <Button variant="text" color="success">
+          {t('forgotPassword')}
+        </Button>
+        <Button onClick={handleLogin} variant="contained" color="success">
           {t('loginBtn')}
         </Button>
       </div>
@@ -43,4 +48,4 @@ const SignInForm = () => {
   );
 };
 
-export default SignInForm;
+export default BrandSignInForm;
