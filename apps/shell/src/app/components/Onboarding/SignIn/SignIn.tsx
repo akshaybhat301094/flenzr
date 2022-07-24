@@ -31,17 +31,55 @@ export function SignIn() {
 
   return (
     <div className="w-screen h-screen" style={outerBox}>
-      <Card className="w-3/4 absolute" style={centerCard}>
-        <div className="flex h-3/4">
-          <Card className="w-1/2">
+      {/* mobile design */}
+      <div className="block laptop:hidden desktop:hidden">
+        <Lottie
+          className="w-3/4 mx-auto"
+          animationData={loginYoga}
+          loop={true}
+          renderer="svg"
+        />
+        <div className="-mt-4 bg-white mx-5 px-10 py-10 rounded-md">
+          <div className="flex mb-4 justify-center items-center">
+            <Typography className="uppercase" variant="body1">
+              <strong>{t('signInAs')}</strong>
+            </Typography>
+            <div className="mx-4 -mt-1">
+              <CustomSelect
+                list={ACCOUNT_TYPES}
+                selectedOption={userType}
+                onChangeSelection={(e: any) => {
+                  handleChange(e);
+                }}
+                color={color}
+              ></CustomSelect>
+            </div>
+          </div>
+          <div>
+            {userType === ACCOUNT_SETTINGS.Flenzr.id ? (
+              <SignInForm></SignInForm>
+            ) : (
+              <BrandSignInForm></BrandSignInForm>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* desktop and laptop design */}
+      <Card
+        className="hidden laptop:block desktop:block w-3/4 h-3/4 laptop:h-auto desktop:h-auto absolute overflow-auto"
+        style={centerCard}
+      >
+        <div className="flex-none laptop:flex desktop:flex">
+          <div className="hidden laptop:block desktop:block laptop:h-auto desktop:h-auto laptop:w-1/2 desktop:w-1/2 mx-auto">
             <Lottie
               className=""
               animationData={loginYoga}
               loop={true}
               renderer="svg"
             />
-          </Card>
-          <div className="w-1/2 p-10 flex flex-wrap items-start content-start">
+          </div>
+          <div className="w-full laptop:w-1/2 desktop:w-1/2 p-4 laptop:p-10 desktop:p-10 flex flex-wrap items-start content-start justify-center">
             <Typography className="uppercase" variant="h6" component="h6">
               <strong>{t('signInAs')}</strong>
             </Typography>

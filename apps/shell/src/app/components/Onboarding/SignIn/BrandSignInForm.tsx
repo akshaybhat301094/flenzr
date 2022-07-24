@@ -36,11 +36,17 @@ const BrandSignInForm = () => {
         className="w-full"
         onChange={(e) => setPassword(e.target.value)}
       />
-      <div className="flex mt-4 justify-between">
-        <Button variant="text" color="success">
+      <div className="flex-none laptop:flex desktop:flex mt-4 laptop:justify-between desktop:justify-between">
+        <Button className="text-center w-full" variant="text">
           {t('forgotPassword')}
         </Button>
-        <Button onClick={handleLogin} variant="contained" color="success">
+        <Button
+          className="w-full"
+          onClick={handleLogin}
+          variant="contained"
+          color="success"
+          size="large"
+        >
           {t('loginBtn')}
         </Button>
       </div>
