@@ -4,13 +4,13 @@ import Card from '@mui/material/Card';
 import Lottie from 'lottie-react';
 import loginYoga from '../../../../../../../assets/Animations/login-yoga.json';
 import Typography from '@mui/material/Typography/Typography';
-import CustomSelect from '../micro/CustomSelect';
 import SignInForm from './SignInForm';
 import {
   ACCOUNT_TYPES,
   ACCOUNT_SETTINGS,
 } from '../../../../../../Constant/AccountType';
 import BrandSignInForm from './BrandSignInForm';
+import CustomSelect from '../micro/CustomSelect';
 
 export function SignIn() {
   const { t } = useTranslation();
