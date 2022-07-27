@@ -10,8 +10,7 @@ import {
   ACCOUNT_SETTINGS,
 } from '../../../../../../Constant/AccountType';
 import BrandSignInForm from './BrandSignInForm';
-import { SharedUiCustomSelect } from 'ui-custom-select';
-
+import { CustomSelect } from '@flenzr/ui';
 export function SignIn() {
   const { t } = useTranslation();
   const [userType, setUserType] = useState(ACCOUNT_TYPES[0]);
@@ -45,14 +44,14 @@ export function SignIn() {
               <strong>{t('signInAs')}</strong>
             </Typography>
             <div className="mx-4 -mt-1">
-              <SharedUiCustomSelect
+              <CustomSelect
                 list={ACCOUNT_TYPES}
                 selectedOption={userType}
                 onChangeSelection={(e: any) => {
                   handleChange(e);
                 }}
                 color={color}
-              ></SharedUiCustomSelect>
+              ></CustomSelect>
             </div>
           </div>
           <div>
@@ -84,14 +83,14 @@ export function SignIn() {
               <strong>{t('signInAs')}</strong>
             </Typography>
             <div className="mx-4 -mt-1">
-              <SharedUiCustomSelect
+              <CustomSelect
                 list={ACCOUNT_TYPES}
                 selectedOption={userType}
                 onChangeSelection={(e: any) => {
                   handleChange(e);
                 }}
                 color={color}
-              ></SharedUiCustomSelect>
+              ></CustomSelect>
             </div>
             <div className="w-full mt-10">
               {userType === ACCOUNT_SETTINGS.Flenzr.id ? (

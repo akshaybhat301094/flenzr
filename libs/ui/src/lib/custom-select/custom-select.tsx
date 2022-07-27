@@ -1,21 +1,21 @@
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
-import styles from './shared-ui-custom-select.module.scss';
+import styles from './custom-select.module.scss';
 
 /* eslint-disable-next-line */
-export interface SharedUiCustomSelectProps {
+export interface CustomSelectProps {
   list: Array<string>;
   selectedOption: any;
   color: string;
   onChangeSelection: any;
 }
 
-export function SharedUiCustomSelect({
+export function CustomSelect({
   list,
   selectedOption,
   color,
   onChangeSelection,
-}: SharedUiCustomSelectProps) {
+}: CustomSelectProps) {
   return (
     <Select
       labelId="demo-simple-select-label"
@@ -44,4 +44,4 @@ export function SharedUiCustomSelect({
   );
 }
 
-export default SharedUiCustomSelect;
+export default CustomSelect;
