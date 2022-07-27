@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@flenzr/custom-select": ["libs/custom-select/src/index.ts"]
+      "ui-custom-select": ["libs/shared/ui-custom-select/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

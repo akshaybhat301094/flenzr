@@ -2,7 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "custom-select": "libs/custom-select",
+    "shared-ui-custom-select": "libs/shared/ui-custom-select",
     "shell": "apps/shell",
     "shell-e2e": "apps/shell-e2e",
     "social": "apps/social",
