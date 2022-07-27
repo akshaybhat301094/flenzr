@@ -10,7 +10,7 @@ import {
   ACCOUNT_SETTINGS,
 } from '../../../../../../Constant/AccountType';
 import BrandSignInForm from './BrandSignInForm';
-import CustomSelect from '../micro/CustomSelect';
+import { CustomSelect } from '@flenzr/custom-select';
 
 export function SignIn() {
   const { t } = useTranslation();

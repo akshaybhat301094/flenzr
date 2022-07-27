@@ -1,17 +1,18 @@
-import { MenuItem, Select, SelectChangeEvent } from '@mui/material';
-import React, { useEffect, useState } from 'react';
-
-const CustomSelect = ({
-  list,
-  selectedOption,
-  color,
-  onChangeSelection,
-}: {
+import { MenuItem, Select } from '@mui/material';
+/* eslint-disable-next-line */
+export interface CustomSelectProps {
   list: Array<string>;
   selectedOption: any;
   color: string;
   onChangeSelection: any;
-}) => {
+}
+
+export function CustomSelect({
+  list,
+  selectedOption,
+  color,
+  onChangeSelection,
+}: CustomSelectProps) {
   return (
     <Select
       labelId="demo-simple-select-label"
@@ -38,6 +39,6 @@ const CustomSelect = ({
       })}
     </Select>
   );
-};
+}
 
 export default CustomSelect;
