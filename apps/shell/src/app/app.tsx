@@ -1,23 +1,16 @@
 import { ThemeProvider } from '@mui/material';
-import * as React from 'react';
+import React, { lazy } from 'react';
 import { defaultTheme } from '../../../../libs/theme';
 import { Routes, Route } from 'react-router-dom';
-import ShellBar from './components/ShellBar/ShellBar';
 
-const SignUp = React.lazy(
-  () => import('./components/Onboarding/SignUp/SignUp')
-);
-const SignIn = React.lazy(
-  () => import('./components/Onboarding/SignIn/SignIn')
-);
-const LandingPage = React.lazy(() => import('./components/Landing/Landing'));
+const SignUp = lazy(() => import('./components/Onboarding/SignUp/SignUp'));
+const SignIn = lazy(() => import('./components/Onboarding/SignIn/SignIn'));
+const LandingPage = lazy(() => import('./components/Landing/Landing'));
 
 export function App() {
-  const withAutherization = false;
   return (
     <ThemeProvider theme={defaultTheme}>
       <React.Suspense fallback={null}>
-        {withAutherization && <ShellBar />}
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/signup" element={<SignUp />} />
