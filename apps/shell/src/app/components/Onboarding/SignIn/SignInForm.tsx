@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Button, FormControl, TextField } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
 const SignInForm = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -10,7 +9,7 @@ const SignInForm = () => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    navigate('/');
+    navigate('');
   };
 
   return (

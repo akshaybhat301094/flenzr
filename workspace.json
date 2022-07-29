@@ -4,8 +4,6 @@
   "projects": {
     "shell": "apps/shell",
     "shell-e2e": "apps/shell-e2e",
-    "social": "apps/social",
-    "social-e2e": "apps/social-e2e",
     "ui": "libs/ui"
   }
 }
