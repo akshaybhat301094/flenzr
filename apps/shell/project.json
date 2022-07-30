@@ -15,15 +15,7 @@
         "main": "apps/shell/src/main.ts",
         "polyfills": "apps/shell/src/polyfills.ts",
         "tsConfig": "apps/shell/tsconfig.app.json",
-        "assets": [
-          "apps/shell/src/favicon.ico",
-          "apps/shell/src/assets",
-          {
-            "input": "libs/shared/assets/src/lib/assets",
-            "glob": "*",
-            "output": "assets"
-          }
-        ],
+        "assets": ["apps/shell/src/favicon.ico", "apps/shell/src/assets"],
         "styles": ["apps/shell/src/styles.scss"],
         "scripts": [],
         "webpackConfig": "apps/shell/webpack.config.js"

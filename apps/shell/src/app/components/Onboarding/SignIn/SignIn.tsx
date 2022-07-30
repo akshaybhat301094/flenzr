@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Card from '@mui/material/Card';
 import Lottie from 'lottie-react';
 import loginYoga from '../../../../../../../assets/Animations/login-yoga.json';
+// import loginYoga from '@flenzr/shared/assets/Animations/login-yoga.json';
 import Typography from '@mui/material/Typography/Typography';
 import SignInForm from './SignInForm';
 import {

@@ -2,6 +2,9 @@ import Button from '@mui/material/Button';
 import Lottie from 'lottie-react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import wave from '../assets/wave.png';
+import influencer from '../assets/influencer-day.json';
+import logo from '../assets/logo-white.svg';
 
 /* eslint-disable-next-line */
 export interface FeatureProductPageProps {}
@@ -18,13 +21,13 @@ export function FeatureProductPage(props: FeatureProductPageProps) {
         style={topBox}
         className="w-screen h-screen laptop:h-3/4 desktop:h-3/4 overflow-hidden relative"
       >
-        {/* <Lottie
+        <Lottie
           className="mt-10 desktop:mt-auto laptop:w-full mx-auto opacity-80"
           animationData={influencer}
           loop={true}
           renderer="svg"
-        /> */}
-        {/* <img
+        />
+        <img
           className="w-1/4 mt-32 hidden laptop:block desktop:block"
           style={{
             position: 'absolute',
@@ -35,12 +38,12 @@ export function FeatureProductPage(props: FeatureProductPageProps) {
           }}
           src={logo}
           alt="Flenzr"
-        /> */}
-        {/* <img
+        />
+        <img
           className="hidden laptop:block desktop:block w-full -mt-1 absolute bottom-0 -mb-1"
           src={wave}
-          alt="Flenzr"
-        /> */}
+          alt=""
+        />
       </div>
 
       <div className="w-screen h-1/2 laptop:h-1/4 -mt-16 desktop:h-1/4 absolute bottom-0 pb-10 overflow-hidden">
