@@ -10,7 +10,7 @@ import {
   ACCOUNT_SETTINGS,
 } from '../../../../../../Constant/AccountType';
 import BrandSignInForm from './BrandSignInForm';
-import { CustomSelect } from '@flenzr/ui';
+import { CustomSelect } from '@flenzr/shared';
 export function SignIn() {
   const { t } = useTranslation();
   const [userType, setUserType] = useState(ACCOUNT_TYPES[0]);
