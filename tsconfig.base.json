@@ -15,10 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@flenzr/feature/product-page": [
-        "libs/feature/product-page/src/index.ts"
-      ],
-      "@flenzr/shared": ["libs/shared/src/index.ts"]
+      "@flenzr/feature/product-page": ["libs/feature/product-page/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
