@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "feature-product-page": "libs/feature/product-page",
     "shell": "apps/shell",
     "shell-e2e": "apps/shell-e2e",
     "ui": "libs/ui"

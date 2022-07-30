@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@flenzr/feature/product-page": [
+        "libs/feature/product-page/src/index.ts"
+      ],
       "@flenzr/ui": ["libs/ui/src/index.ts"]
     }
   },
