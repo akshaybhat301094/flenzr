@@ -18,6 +18,7 @@
       "@flenzr/feature/product-page": [
         "libs/feature/product-page/src/index.ts"
       ],
+      "@flenzr/shared/assets": ["libs/shared/assets/src/index.ts"],
       "@flenzr/shared/ui-custom-select": [
         "libs/shared/ui-custom-select/src/index.ts"
       ]
