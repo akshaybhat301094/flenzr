@@ -2,7 +2,7 @@ const withModuleFederation = require('@nrwl/react/module-federation');
 const moduleFederationConfig = require('./module-federation.config');
 
 module.exports = withModuleFederation({
-  ...moduleFederationConfig,
+  ...moduleFederationConfig
   /*
    * Remote overrides for production.
    * Each entry is a pair of an unique name and the URL where it is deployed.
@@ -20,5 +20,4 @@ module.exports = withModuleFederation({
    *   ['app2', '//example.com/path/to/app2/remoteEntry.js'],
    * ]
    */
-  remotes: [['social', '//localhost:4201/']],
 });

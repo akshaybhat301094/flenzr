@@ -1,6 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 import 'typeface-poppins';
 
+// eslint-disable-next-line import/prefer-default-export
 export const defaultTheme = createTheme({
   palette: {
     primary: {

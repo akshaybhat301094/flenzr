@@ -2,9 +2,10 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "feature-product-page": "libs/feature/product-page",
+    "shared-assets": "libs/shared/assets",
+    "shared-ui-custom-select": "libs/shared/ui-custom-select",
     "shell": "apps/shell",
-    "shell-e2e": "apps/shell-e2e",
-    "social": "apps/social",
-    "social-e2e": "apps/social-e2e"
+    "shell-e2e": "apps/shell-e2e"
   }
 }
